@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+body{
+  height: 100%;
+}
+
+.bg-login {
+  background-image: url('./img/login-fondo.jpg');
+}
+.bg-tienda {
+  background-image: url('./img/main-fondo.jpg');
+}
+.bg-container{
+  height: 100%;
+  background: white;
+}
+.fill{
+  position: absolute;
+  width: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+.navbar a{
+  color: grey;
+}
+.card-img-top{
+  height: 100%;
+  max-height: 163px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+ opacity: 1;
+}
+
+input[type=number]{
+  width: 40px;
+}
+
+.carrito{
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.table td, .table th{
+  vertical-align: middle;
+}
+
