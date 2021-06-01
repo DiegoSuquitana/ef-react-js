@@ -15,7 +15,7 @@ class App extends React.Component{
                   <Route path="/tienda" component = {Tienda} />
                   <Route path="/carrito" component = {Carrito} />
                   <Route path="/detalles/:nombreProducto" component = {Detalles} />
-                  <Route path='/login' component = {Login} />
+                  <Route path='/' component = {Login} />
                 </Switch>
               </Router>
             </div>
