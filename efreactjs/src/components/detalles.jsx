@@ -17,6 +17,7 @@ class Detalles extends React.Component{
             pathname : '/tienda',
             state : {productos : Helper.productos}
         }
+
         return(
             <div className="bg-container mt-3 p-3 rounded">
                 <div className="row">
@@ -27,7 +28,7 @@ class Detalles extends React.Component{
                 </div>
                 <div className="row">
                     <div className="col-sm-8">
-                        <img src={"../src/img/"+this.state.producto.imagen} className="img-fluid rounded border p-2" alt={this.state.producto.nombre}/>
+                        <img src={"/img/"+this.state.producto.imagen} className="img-fluid rounded border p-2" alt={this.state.producto.nombre}/>
                     </div>
                     <div className="col">
                         <span><h2>Precio: {this.state.producto.precio}</h2></span>
