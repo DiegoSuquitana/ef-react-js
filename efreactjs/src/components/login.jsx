@@ -38,9 +38,11 @@ class Login extends React.Component{
                             <p className="h4 mb-4">Inicia Sesión</p>
                             <span className="text-warning">{this.state.error}</span>
                         <div className='form-group'>
+                            <label>Usuario: </label>
                             <input type="email" className={`${this.state.errorClass} form-control`} id='usuarioInput' placeholder='Usuario' required autoComplete="username" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"/>
                         </div>
                         <div className='form-group'>
+                            <label>Password: </label>
                             <input type="password" className={`${this.state.errorClass} form-control`} id='passwordInput' placeholder='Contraseña' required autoComplete="current-password"/>
                         </div>
                             <button type='button' className='btn btn-success my-4' id='botonIngresar' onClick={this.validarUsuario.bind(this)}>Ingresar</button>
