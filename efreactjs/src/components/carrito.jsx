@@ -41,11 +41,14 @@ class Carrito extends React.Component{
                 </div>
             )         
         }else{
+       
             for (let index = 0; index < pedido.length; index++) {
                 const productoFinal = pedido[index];
+
+                
                 tabla.push(
                             <tr key={index}>
-                                <th scope="row"><img src={"./src/img/"+productoFinal.imagen} className="img-thumbnail carrito"/></th>
+                                <th scope="row"><img src={"/img/"+productoFinal.imagen} className="img-thumbnail carrito"/></th>
                                 <th>{productoFinal.nombre}</th>
                                 <th>{productoFinal.cantidad}</th>
                                 <th>{productoFinal.precio}</th>
