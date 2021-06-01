@@ -34,7 +34,7 @@ class Menu extends React.Component{
                       </a>
                     </li>
                     <li className="nav-item">
-                        <Link to="/login" className="nav-link waves-effect waves-ligh">
+                        <Link to="/" className="nav-link waves-effect waves-ligh">
                           <i className="fa fa-sign-out"></i>
                         </Link>
                     </li>
