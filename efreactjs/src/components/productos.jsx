@@ -24,9 +24,10 @@ class Productos extends React.Component{
         };
 
         return(
+            
             <div className="card">
                 <Link to={links} title="Ver producto">
-                <img className="card-img-top" src={'./src/img/'+this.props.productoSimple.imagen} alt={this.props.productoSimple.nombre} /></Link>
+                <img className="card-img-top" src={'./img/'+this.props.productoSimple.imagen} alt={this.props.productoSimple.nombre} /></Link>
                 <div className="card-body text-muted">
                 <Link to={links} title="Ver producto"><h4 className="card-title">{this.props.productoSimple.nombre}</h4></Link>
                     <p>Precio: ${this.props.productoSimple.precio} ‎</p>
