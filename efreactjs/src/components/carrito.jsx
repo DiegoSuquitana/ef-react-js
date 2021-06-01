@@ -139,9 +139,11 @@ class Carrito extends React.Component{
                 const helper =  Helper.productos[a];
                 if(element.nombre == helper.nombre){
                     Helper.productos[a].stock = element.stock
+                    
                 }
             }
         }
+        alert("Compra Realizada")
     }
 
     componentWillMount(){
