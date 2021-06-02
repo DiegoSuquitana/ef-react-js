@@ -4,6 +4,7 @@ import Menu from './menu.jsx';
 import Helper from '../helper.js';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import Productos from './productos.jsx';
 
 class Carrito extends React.Component{
     constructor(){
@@ -132,17 +133,54 @@ class Carrito extends React.Component{
         this.cancelarPedido();
     }
 
+    actualizarProductos_old(productos){
+        this.http.put('https://tienda-online-efnextu.firebaseio.com/producto/.json', JSON.stringify(productos)).send(()=>{
+        alert ("Compra Realizada");
+        })
+      
+    }
+
+    /*request.post('http://localhost:8000/guide')
+        .send(JSON.stringify(this.state))
+        .end((err, resp) => {
+            if (err) console.log('Error: ' + err);
+            else {
+                console.log(resp.text);
+            }
+        });
+*/
+
+    actualizarProductos(productoId, productoStock){
+        console.log("act bd: " + productoId);
+        Request.patch('https://tienda-online-efnextu.firebaseio.com/producto/'+productoId+'/.json?')
+        .send({"stock":JSON.stringify(productoStock)})
+        .end((err, resp) => {
+            if (err) console.log('Error: ' + err);
+            else {
+                console.log(resp.text);
+                alert("Compra Realizada");
+            }
+        });
+      
+    }
+
     actualizaBBDD(productos){
+        
         for (let i = 0; i < productos.length; i++) {
             const element = productos[i];
             for (let a = 0; a < Helper.productos.length; a++) {
                 const helper =  Helper.productos[a];
                 if(element.nombre == helper.nombre){
-                    Helper.productos[a].stock = element.stock
+                    Helper.productos[a].stock = element.stock;
+                    console.log(element.nombre);
+                    console.log(element.stock);
                     
+                    //productoId=productos[a].id;
+                    this.actualizarProductos(element.id,element.stock)
                 }
             }
         }
+        
         alert("Compra Realizada")
     }
 
