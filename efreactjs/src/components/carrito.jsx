@@ -133,23 +133,6 @@ class Carrito extends React.Component{
         this.cancelarPedido();
     }
 
-    actualizarProductos_old(productos){
-        this.http.put('https://tienda-online-efnextu.firebaseio.com/producto/.json', JSON.stringify(productos)).send(()=>{
-        alert ("Compra Realizada");
-        })
-      
-    }
-
-    /*request.post('http://localhost:8000/guide')
-        .send(JSON.stringify(this.state))
-        .end((err, resp) => {
-            if (err) console.log('Error: ' + err);
-            else {
-                console.log(resp.text);
-            }
-        });
-*/
-
     actualizarProductos(productoId, productoStock){
         console.log("act bd: " + productoId);
         Request.patch('https://tienda-online-efnextu.firebaseio.com/producto/'+productoId+'/.json?')
@@ -158,7 +141,7 @@ class Carrito extends React.Component{
             if (err) console.log('Error: ' + err);
             else {
                 console.log(resp.text);
-                alert("Compra Realizada");
+                //alert("Compra Realizada");
             }
         });
       
